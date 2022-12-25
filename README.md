@@ -13,6 +13,9 @@
  
     
 ### Phân công công việc:
- - [x] Nguyễn Hải Dương: Usecase Trả xe
+ - [x] Nguyễn Hải Dương
+       - Usecase Trả xe
+       - Usecase Diagram
+       - SRS
  - [x] Trịnh Tùng Dương: Usecase Thuê xe
  - [x] Lê Anh Đức: Usecase Xem xe  
