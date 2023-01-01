@@ -5,7 +5,7 @@
  - Trịnh Tùng Dương
  - Lê Anh Đức
 
-## Week 1
+## WEEK 1
 ### Công việc hoàn thành
  - [x] Use case diagram
  - [x] SRS
@@ -21,3 +21,30 @@
    - Usecase Thuê xe
  - [x] Lê Anh Đức: 
    - Usecase Xem xe  
+
+## WEEK 2
+### Công việc hoàn thành
+ - [x] Class Design 
+ - [x] Analysis Diagram
+ - [x] Subsystem Design 
+ - [x] GUI Design 
+ 
+### Phân công công việc 
+ - [x] Nguyễn Hải Dương
+   - Class Design 
+   - Return Bike Analysis Diagram
+   - Interbank Subsystem
+ - [x] Trịnh Tùng Dương
+   - Barcode
+   - GUI Design
+   - Rent Bike Analysis Diagram
+ - [x] Lê Anh Đức  
+   - View Bike Analysis Diagram
+
+## WEEK 3
+### Công việc hoàn thành
+ - [x] Data Modeling
+ 
+### Phân công công việc 
+ - [x] Lê Anh Đức  
+   - Data modeling
