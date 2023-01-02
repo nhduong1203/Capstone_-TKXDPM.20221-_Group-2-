@@ -35,7 +35,6 @@
    - Return Bike Analysis Diagram
    - Interbank Subsystem
  - [x] Trịnh Tùng Dương
-   - Barcode
    - GUI Design
    - Rent Bike Analysis Diagram
  - [x] Lê Anh Đức  
