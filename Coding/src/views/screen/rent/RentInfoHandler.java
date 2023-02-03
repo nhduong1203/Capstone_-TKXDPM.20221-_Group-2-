@@ -83,7 +83,7 @@ public class RentInfoHandler extends BaseScreenHandler {
 
         dock.setText(Integer.toString(bike.getDockID()));
 
-        pedal.setText(bike.getNumOfPedal()+" pedals");
+        pedal.setText(Integer.toString(bike.getNumOfPedal()));
 
         licensePlates.setText(bike.getLicensePlate());
 

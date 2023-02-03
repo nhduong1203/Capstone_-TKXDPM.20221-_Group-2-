@@ -159,9 +159,9 @@ public class PaymentController extends BaseController {
 			String [] parts = expirationDate.split("/");
 			String part1 = parts[0];
 			String part2 = parts[1];
-			int day = Integer.parseInt(part1);
-			int month = Integer.parseInt(part2);
-			if(day > 31 || day < 1) return false;
+			int month = Integer.parseInt(part1);
+			int year = Integer.parseInt(part2);
+			if(year < Calendar.getInstance().get(Calendar.YEAR) % 100 || year > 100) return false;
 			if(month > 12 || month < 1) return false;
 		}catch (Exception e){
 			return false;
