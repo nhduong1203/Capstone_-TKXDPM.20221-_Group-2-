@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="790.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#009bff" layoutX="151.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin thanh toán">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Pane layoutX="18.0" layoutY="160.0" prefHeight="346.0" prefWidth="566.0">
+         <children>
+            <Text layoutX="44.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barcode">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saddle">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pedals">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dock ID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="License plates">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnPayment" layoutX="301.0" layoutY="301.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" text="Thanh toán">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancel" layoutX="420.0" layoutY="301.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" text="Quay lại">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="barCode" layoutX="182.0" layoutY="13.0" prefHeight="25.0" prefWidth="340.0" text="Label" />
+            <Label fx:id="type" layoutX="183.0" layoutY="51.0" prefHeight="25.0" prefWidth="340.0" text="Label" />
+            <Label fx:id="saddle" layoutX="182.0" layoutY="87.0" prefHeight="25.0" prefWidth="340.0" text="Label" />
+            <Label fx:id="pedal" layoutX="182.0" layoutY="121.0" prefHeight="25.0" prefWidth="340.0" text="Label" />
+            <Label fx:id="dock" layoutX="182.0" layoutY="154.0" prefHeight="25.0" prefWidth="340.0" text="Label" />
+            <Label fx:id="licensePlates" layoutX="182.0" layoutY="191.0" prefHeight="25.0" prefWidth="340.0" text="Label" />
+            <Label fx:id="value" layoutX="182.0" layoutY="223.0" prefHeight="25.0" prefWidth="340.0" text="Label" />
+            <Label fx:id="deposit" layoutX="183.0" layoutY="255.0" prefHeight="25.0" prefWidth="340.0" text="Label" />
+         </children>
+      </Pane>
+      <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="98.0" prefWidth="790.0" style="-fx-background-color: ffffff; -fx-border-color: ddd;">
+         <children>
+            <ImageView fx:id="capstoneImage" fitHeight="97.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/images/Splash.png" />
+               </image>
+            </ImageView>
+            <Text fill="#009bff" layoutX="119.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ecobike">
+               <font>
+                  <Font name="Calibri Bold" size="45.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="606.0" layoutY="97.0" prefHeight="426.0" prefWidth="183.0" style="-fx-background-color: ffa500;">
+         <children>
+            <Pane layoutX="43.0" layoutY="37.0" prefHeight="98.0" prefWidth="98.0" style="-fx-background-color: fff; -fx-border-color: ddd;">
+               <children>
+                  <ImageView fx:id="home" fitHeight="80.0" fitWidth="80.0" layoutX="9.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/images/HomeIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="43.0" layoutY="164.0" prefHeight="98.0" prefWidth="98.0" style="-fx-background-color: fff; -fx-border-color: ddd;">
+               <children>
+                  <ImageView fx:id="rentalBike" fitHeight="80.0" fitWidth="80.0" layoutX="9.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/images/InfoIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="43.0" layoutY="296.0" prefHeight="98.0" prefWidth="98.0" style="-fx-background-color: fff; -fx-border-color: ddd;">
+               <children>
+                  <ImageView fx:id="card" fitHeight="80.0" fitWidth="80.0" layoutX="9.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/images/rentBikeIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
