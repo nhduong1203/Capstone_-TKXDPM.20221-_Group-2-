@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  * This {@code AIMSDB} class represent database
  * in our ECO BIKE Software.
  *
- * @author nhom10
+ * @author nhom2
  *
  */
 public class AIMSDB {
