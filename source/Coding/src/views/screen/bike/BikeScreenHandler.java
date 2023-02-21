@@ -1,22 +1,17 @@
 package views.screen.bike;
 
-import controller.OutputController;
 import controller.ViewBikeController;
 import entity.bike.Bike;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
-import views.screen.dock.BikeDockScreenHandler;
 import views.screen.popup.PopupScreen;
-import views.screen.rent.RentHandler;
 import views.screen.rent.RentInfoHandler;
 
 import java.io.File;
@@ -28,21 +23,6 @@ public class BikeScreenHandler extends BaseScreenHandler {
     public static Logger LOGGER = Utils.getLogger(BikeScreenHandler.class.getName());
     @FXML
     private ImageView bikeImage;
-
-    @FXML
-    private Label bikeID;
-
-    @FXML
-    private Label bikeType;
-
-    @FXML
-    private  Label bikeValue;
-
-    @FXML
-    private Label bikeSeats;
-
-    @FXML
-    private Label bikeStatus;
 
     @FXML
     private TextArea advancedInfo;
@@ -76,17 +56,7 @@ public class BikeScreenHandler extends BaseScreenHandler {
         bikeImage.setFitWidth(186);
         bikeImage.setImage(image);
 
-        bikeID.setText(OutputController.Convert(Integer.toString(bike.getId())));
-
-        bikeSeats.setText(Integer.toString(bike.getNumOfSeat()));
-
-        bikeType.setText(bike.getType());
-
-        bikeValue.setText(bike.getValueOfBike()+" VND");
-
-        bikeStatus.setText(bike.getBikeStatus());
-
-        advancedInfo.setText(bike.getAdvancedInfo());
+        advancedInfo.setText(bike.getInfo());
         advancedInfo.setEditable(false);
 
         btnRentBike.setOnMouseClicked(e -> {

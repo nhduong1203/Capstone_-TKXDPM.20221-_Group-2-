@@ -1,14 +1,13 @@
 package entity.bike;
 
+import entity.costcalculator.DepositCostCalculator;
+import entity.costcalculator.RentCostCalculator;
 import entity.db.AIMSDB;
 import utils.Utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import java.util.logging.Logger;
 
 /**
@@ -33,6 +32,18 @@ public class Bike {
     protected String type;
     protected String name;
     protected String imageURL;
+
+    protected DepositCostCalculator depositCostCalculator;
+
+    protected RentCostCalculator rentCostCalculator;
+
+    public int calculateDepositCost(){
+        return depositCostCalculator.calculateDepositCost(this);
+    }
+
+    public long calculateRentCost(String startTime, String endTime){
+        return rentCostCalculator.calculateRentCost(startTime, endTime, this);
+    }
 
     public float getCostScale() {
         return costScale;
@@ -129,9 +140,11 @@ public class Bike {
         }
     }
 
-    public String getAdvancedInfo(){
+    public String getInfo(){
         return "Không";
     }
+
+    public String getRentInfo(){return "Không";}
     public String getLicensePlate() {
         return licensePlate;
     }

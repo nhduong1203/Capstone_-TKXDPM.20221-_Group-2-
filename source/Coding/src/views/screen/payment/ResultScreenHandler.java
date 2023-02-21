@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import utils.Configs;
 import views.screen.BaseScreenHandler;
@@ -13,7 +12,7 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
-public class ResultScreeenHandler extends BaseScreenHandler {
+public class ResultScreenHandler extends BaseScreenHandler {
 
     @FXML
     private Label resultLabel;
@@ -24,7 +23,7 @@ public class ResultScreeenHandler extends BaseScreenHandler {
     @FXML
     private Button btnConfirm;
 
-    public ResultScreeenHandler(Stage stage, String screenPath, String result, String resultMessage) throws IOException {
+    public ResultScreenHandler(Stage stage, String screenPath, String result, String resultMessage) throws IOException {
         super(stage,screenPath);
         setMenuImage();
         setImage();

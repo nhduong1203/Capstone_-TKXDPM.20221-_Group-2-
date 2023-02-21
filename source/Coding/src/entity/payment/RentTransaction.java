@@ -2,8 +2,6 @@ package entity.payment;
 
 import controller.OutputController;
 import entity.bike.Bike;
-import entity.costcalculator.DepositCostCalculator;
-import entity.costcalculator.DepositStrategy;
 import entity.db.AIMSDB;
 import utils.Utils;
 
@@ -39,14 +37,8 @@ public class RentTransaction {
 
     private int rentCost;
 
-    private DepositCostCalculator depositCostCalculator = new DepositStrategy();
-
     public RentTransaction() throws SQLException {
         setRentalCode();
-    }
-
-    public void SetDepositStrategy(DepositCostCalculator strategy){
-        depositCostCalculator = strategy;
     }
 
     /**
@@ -187,7 +179,7 @@ public class RentTransaction {
     }
 
     public void setDepositeCost(Bike bike) {
-        this.depositCost = depositCostCalculator.calculateDepositCost(bike);
+        this.depositCost = bike.calculateDepositCost();
     }
 
     public String getReturnTime() {

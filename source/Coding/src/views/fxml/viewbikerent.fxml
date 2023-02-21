@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="790.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="790.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="98.0" prefWidth="790.0" style="-fx-background-color: fff; -fx-border-color: ddd;">
          <children>
@@ -35,49 +34,19 @@
             </ImageView>
             <Pane layoutX="14.0" layoutY="8.0" prefHeight="324.0" prefWidth="363.0">
                <children>
-                  <Text layoutX="1.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="80.0">
+                  <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info" wrappingWidth="80.0">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Text>
-                  <Text layoutX="1.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" wrappingWidth="80.0">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="1.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit" wrappingWidth="80.0">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="1.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seats" wrappingWidth="80.0">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="1.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time" wrappingWidth="80.0">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="1.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info" wrappingWidth="80.0">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Text>
-                  <TextArea fx:id="advancedInfo" layoutX="97.0" layoutY="226.0" prefHeight="78.0" prefWidth="251.0" />
-                  <Label fx:id="bikeID" layoutX="97.0" layoutY="8.0" prefHeight="21.0" prefWidth="251.0" text="Label" />
-                  <Label fx:id="bikeType" layoutX="95.0" layoutY="48.0" prefHeight="21.0" prefWidth="251.0" text="Label" />
-                  <Label fx:id="bikeValue" layoutX="95.0" layoutY="91.0" prefHeight="21.0" prefWidth="251.0" text="Label" />
-                  <Label fx:id="bikeSeats" layoutX="97.0" layoutY="136.0" prefHeight="21.0" prefWidth="251.0" text="Label" />
-                  <Label fx:id="bikeStatus" layoutX="97.0" layoutY="185.0" prefHeight="21.0" prefWidth="251.0" text="Label" />
+                  <TextArea fx:id="advancedInfo" layoutX="12.0" layoutY="45.0" prefHeight="268.0" prefWidth="336.0" />
                </children>
             </Pane>
             <Button fx:id="btnReturnBike" layoutX="432.0" layoutY="217.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" text="Trả xe">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Button>
-            <Button fx:id="btnReturnBack" layoutX="432.0" layoutY="276.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" text="Quay lại">
+            <Button fx:id="btnReturnBack" layoutX="432.0" layoutY="280.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" text="Quay lại">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

@@ -6,12 +6,10 @@ import entity.payment.RentTransaction;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
-import views.screen.popup.PopupScreen;
 import views.screen.rent.RentInfoHandler;
 
 import java.io.IOException;
@@ -109,7 +107,7 @@ public class PaymentScreenHandler extends BaseScreenHandler {
             Configs.rentTransaction = null;
         }
         LOGGER.info(" "+response);
-        ResultScreeenHandler resultScreen = new ResultScreeenHandler(this.stage, Configs.RESULT_SCREEN_PATH, response.get("RESULT"), response.get("MESSAGE") );
+        ResultScreenHandler resultScreen = new ResultScreenHandler(this.stage, Configs.RESULT_SCREEN_PATH, response.get("RESULT"), response.get("MESSAGE") );
         resultScreen.setPreviousScreen(this);
         resultScreen.setHomeScreenHandler(homeScreenHandler);
         resultScreen.setScreenTitle("Result Screen");
@@ -154,7 +152,7 @@ public class PaymentScreenHandler extends BaseScreenHandler {
         }
 //        Configs.bike = bike;
         LOGGER.info(" "+response);
-        ResultScreeenHandler resultScreen = new ResultScreeenHandler(this.stage, Configs.RESULT_SCREEN_PATH, response.get("RESULT"), response.get("MESSAGE") );
+        ResultScreenHandler resultScreen = new ResultScreenHandler(this.stage, Configs.RESULT_SCREEN_PATH, response.get("RESULT"), response.get("MESSAGE") );
         resultScreen.setPreviousScreen(this);
         resultScreen.setHomeScreenHandler(homeScreenHandler);
         resultScreen.setScreenTitle("Result Screen");

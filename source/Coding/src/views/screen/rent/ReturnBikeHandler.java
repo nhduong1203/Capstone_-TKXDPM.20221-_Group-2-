@@ -60,12 +60,10 @@ public class ReturnBikeHandler extends BaseScreenHandler {
     private void setUp() throws SQLException {
         rentTransaction.endRent();
 
-        ReturnBikeController controller = new ReturnBikeController();
         LOGGER.info(rentTransaction.getRentTime());
         LOGGER.info(rentTransaction.getReturnTime());
-        LOGGER.info(""+(controller == null));
 
-        rentTransaction.setRentCost((int) controller.calculateFee(rentTransaction.getRentTime(), rentTransaction.getReturnTime()));
+        rentTransaction.setRentCost((int) Configs.bike.calculateRentCost(rentTransaction.getRentTime(), rentTransaction.getReturnTime()));
 
         rentBikeID.setText(OutputController.Convert(Integer.toString(rentTransaction.getBikeCode())));
 

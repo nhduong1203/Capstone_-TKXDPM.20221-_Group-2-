@@ -13,14 +13,4 @@ public class ReturnBikeController extends BaseController{
     /**
      * cost calculator interface and strategy
      * */
-    private RentCostCalculator calculator = new Strategy1();
-    public long calculateFee(String startTime, String endTime){
-        return calculator.calculateRentCost(startTime, endTime, Configs.bike);
-    }
-    public long calculateFee(String startTime, String endTime, long stopTime){
-        return calculator.calculateRentCostHasStopTime(startTime, endTime, Configs.bike, stopTime);
-    }
-    public void SetStrategy(RentCostCalculator cal){
-        calculator = cal;
-    }
 }

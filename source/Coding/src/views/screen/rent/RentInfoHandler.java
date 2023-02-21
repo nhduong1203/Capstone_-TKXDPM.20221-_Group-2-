@@ -60,7 +60,6 @@ public class RentInfoHandler extends BaseScreenHandler {
 
     private final Bike bike;
 
-    private DepositCostCalculator depositCostCalculator = new DepositStrategy();
     public RentInfoHandler(Stage stage, String screenPath, Bike bike) throws IOException, SQLException {
         super(stage, screenPath);
         setMenuImage();
@@ -91,7 +90,7 @@ public class RentInfoHandler extends BaseScreenHandler {
 
         value.setText(bike.getValueOfBike()+" VND");
 
-        deposit.setText(depositCostCalculator.calculateDepositCost(bike) +" VND");
+        deposit.setText(bike.calculateDepositCost() +" VND");
 
         btnPayment.setOnMouseClicked(e -> {
             try{
