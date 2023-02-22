@@ -23,6 +23,7 @@ public class BikeHandler {
      * @return doi tuong xe voi id truyen vao
      * @throws SQLException
      */
+
     public static Bike getBikeById(int id){
         String sql = "SELECT * FROM bike WHERE bikeCode = "+id;
         ResultSet res = AIMSDB.query(sql);
@@ -36,6 +37,18 @@ public class BikeHandler {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static String tableBikeType(String s) throws SQLException {
+        if(s.equals("Xe dap don")){
+            return "singleBike";
+        }else if(s.equals("Xe dap doi")){
+            return "doubleBike";
+        }else if(s.equals("Xe dap dien")){
+            return "electricBike";
+        }else {
+            return null;
+        }
     }
 
     public static Bike handleBikeType(ResultSet res) throws SQLException {
@@ -62,9 +75,15 @@ public class BikeHandler {
         ResultSet res = stm.executeQuery(sql);
         ArrayList medium = new ArrayList<>();
         while(res.next()){
-            Bike bike = handleBikeType(res);
-            if(bike!=null) {
-                medium.add(bike);
+            String bikeTable = tableBikeType(res.getString("type"));
+            String mysql = "SELECT * FROM bike INNER JOIN " + bikeTable+ " ON bike.bikeCode = " + bikeTable+ ".bikeCode WHERE bike.bikeCode = "+res.getInt("bikeCode");
+            Statement mystm = AIMSDB.getConnection().createStatement();
+            ResultSet myres = mystm.executeQuery(mysql);
+            while(myres.next()){
+                Bike bike = handleBikeType(myres);
+                if(bike!=null) {
+                    medium.add(bike);
+                }
             }
         }
         LOGGER.info(id+"-"+res);

@@ -10,6 +10,7 @@ import java.sql.SQLException;
 
 public class SingleElectricBike extends Bike{
     private int remainBattery;
+//    private int numOfPedal;
     private int maxTime;
     private String motor;
 
@@ -19,6 +20,7 @@ public class SingleElectricBike extends Bike{
         this.maxTime = res.getInt("maxTime");
         this.motor = res.getString("motor");
         this.costScale = 1.5F;
+//        this.numOfPedal = res.getInt("numOfPedal");
     }
 
     @Override

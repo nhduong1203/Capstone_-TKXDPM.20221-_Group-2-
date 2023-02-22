@@ -29,8 +29,8 @@ public class AIMSDB {
         if (connect != null) return connect;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/ecobike";
-            connect = DriverManager.getConnection(url, "root", "");
+            String url = "jdbc:mysql://localhost:3306/new_ecobike";
+            connect = DriverManager.getConnection(url, "root", "@duongnh!1203");
             LOGGER.info("Connect database successfully");
         } catch (Exception e) {
             LOGGER.info(e.getMessage());

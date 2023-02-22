@@ -9,9 +9,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SingleBike extends Bike{
-
+    private int numOfPedal;
     public SingleBike(ResultSet res) throws SQLException {
         super(res);
+        this.numOfPedal = res.getInt("numOfPedal");
         this.costScale = 1.0F;
     }
 

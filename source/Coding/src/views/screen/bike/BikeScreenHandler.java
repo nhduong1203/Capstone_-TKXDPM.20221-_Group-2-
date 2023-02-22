@@ -61,19 +61,6 @@ public class BikeScreenHandler extends BaseScreenHandler {
 
         btnRentBike.setOnMouseClicked(e -> {
             try{
-                //bike.setStatus(-1);
-                //bike.rentBike();
-                //setBikeInfo();
-//                LOGGER.info("User click to view barcode");
-
-                // Open BarCode Screen
-
-//                RentHandler barCode = new RentHandler(this.stage, Configs.RENT_BIKE_PATH, bike);
-//                barCode.setBController(new ViewBikeController());
-//                barCode.setScreenTitle("Bar Code");
-//                barCode.setPreviousScreen(this);
-//                barCode.setHomeScreenHandler(this.homeScreenHandler);
-//                barCode.show();
 
                 LOGGER.info("User click to see invoice payment");
                 if(Configs.rentTransaction!=null){

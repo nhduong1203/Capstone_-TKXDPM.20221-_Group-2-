@@ -3,11 +3,16 @@ package entity.bike;
 import entity.costcalculator.DepositCostCalculator;
 import entity.costcalculator.RentCostCalculator;
 import entity.db.AIMSDB;
+//import entity.bike.SingleBike;
+//import entity.bike.DoubleBike;
+//import entity.bike.SingleElectricBike;
 import utils.Utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 /**
@@ -24,7 +29,7 @@ public class Bike {
     protected int id;
     protected String licensePlate;
     protected int status;
-    protected int numOfPedal;
+//    protected int numOfPedal;
     protected int valueOfBike;
     protected int numOfSaddle;
     protected int numOfSeat;
@@ -80,7 +85,7 @@ public class Bike {
         this.dockID = DockID;
         this.imageURL = imageURL;
         this.status = status;
-        this.numOfPedal = numOfPedal;
+//        this.numOfPedal = numOfPedal;
         this.valueOfBike = valueOfBike;
         this.numOfSaddle = numOfSaddle;
         this.numOfSeat = numOfSeat;
@@ -94,7 +99,7 @@ public class Bike {
         this.dockID = res.getInt("dockID");
         this.imageURL = res.getString("bikeImage");
         this.status = res.getInt("status");
-        this.numOfPedal = res.getInt("numOfPedal");
+//        this.numOfPedal = res.getInt("numOfPedal");
         this.valueOfBike = res.getInt("valueOfBike");
         this.numOfSaddle = res.getInt("numOfSaddle");
         this.numOfSeat = res.getInt("numOfSeat");
@@ -175,14 +180,6 @@ public class Bike {
 
     public void setStatus(int status) {
         this.status = status;
-    }
-
-    public int getNumOfPedal() {
-        return numOfPedal;
-    }
-
-    public void setNumOfPedal(int numOfPedal) {
-        this.numOfPedal = numOfPedal;
     }
 
     public int getValueOfBike() {

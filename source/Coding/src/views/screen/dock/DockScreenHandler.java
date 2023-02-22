@@ -56,6 +56,7 @@ public class DockScreenHandler extends BaseScreenHandler{
 
         try {
             for (Object object : dock.getListBike()) {
+                // object
                 Bike bike = (Bike) object;
                 BikeDockScreenHandler b = new BikeDockScreenHandler(Configs.DOCK_BIKE_PATH, bike);
                 LOGGER.info("User click to view bike "+bike.getId());

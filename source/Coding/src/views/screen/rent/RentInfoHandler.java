@@ -10,16 +10,11 @@ import entity.payment.RentTransaction;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
-import views.screen.dock.BikeDockScreenHandler;
 import views.screen.payment.PaymentScreenHandler;
-import views.screen.popup.PopupScreen;
 
 import java.io.File;
 import java.io.IOException;
@@ -37,8 +32,8 @@ public class RentInfoHandler extends BaseScreenHandler {
     @FXML
     private Label saddle;
 
-    @FXML
-    private  Label pedal;
+//    @FXML
+//    private  Label pedal;
 
     @FXML
     private Label dock;
@@ -82,7 +77,7 @@ public class RentInfoHandler extends BaseScreenHandler {
 
         dock.setText(Integer.toString(bike.getDockID()));
 
-        pedal.setText(Integer.toString(bike.getNumOfPedal()));
+//        pedal.setText(Integer.toString(bike.getNumOfPedal()));
 
         licensePlates.setText(bike.getLicensePlate());
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Capstone_TKXDPM.20221_Group-2-.iml" filepath="$PROJECT_DIR$/.idea/Capstone_TKXDPM.20221_Group-2-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/Coding.iml" filepath="$PROJECT_DIR$/source/Coding/Coding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/build/build.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/build/build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/core-api/core-api.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/core-api/core-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/core-impl/core-impl.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/core-impl/core-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/demo/demo.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/generated/generated.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/generated/generated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.base/javafx.base.iml" filepath="$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.base/javafx.base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.controls/javafx.controls.iml" filepath="$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.controls/javafx.controls.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.fxml/javafx.fxml.iml" filepath="$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.fxml/javafx.fxml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.graphics/javafx.graphics.iml" filepath="$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.graphics/javafx.graphics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.media/javafx.media.iml" filepath="$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.media/javafx.media.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.swing/javafx.swing.iml" filepath="$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.swing/javafx.swing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.web/javafx.web.iml" filepath="$PROJECT_DIR$/source/Coding/lib/javafx-sdk-15/lib/src/javafx.web/javafx.web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/legacy/legacy.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/legacy/legacy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/protocol-impl/protocol-impl.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/protocol-impl/protocol-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/test/test.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/user-api/user-api.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/user-api/user-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/user-impl/user-impl.iml" filepath="$PROJECT_DIR$/source/Coding/lib/mysql-connector-j-8.0.31/src/main/user-impl/user-impl.iml" />
+    </modules>
+  </component>
+</project>
