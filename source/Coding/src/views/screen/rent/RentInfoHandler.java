@@ -85,6 +85,7 @@ public class RentInfoHandler extends BaseScreenHandler {
 
         value.setText(bike.getValueOfBike()+" VND");
 
+        bike.setDepositStrategy(new DepositStrategy());
         deposit.setText(bike.calculateDepositCost() +" VND");
 
         btnPayment.setOnMouseClicked(e -> {
@@ -92,6 +93,8 @@ public class RentInfoHandler extends BaseScreenHandler {
                 // Thanh toán
                 RentTransaction rentTransaction = new RentTransaction();
                 rentTransaction.setBikeCode(bike.getId());
+
+                bike.setDepositStrategy(new DepositStrategy());
                 rentTransaction.setDepositeCost(bike);
 
                 PaymentScreenHandler paymentScreen = new PaymentScreenHandler(this.stage, Configs.PAYMENT_SCREEN, rentTransaction);

@@ -35,4 +35,16 @@ public class InputController {
         System.out.println("-1");
         return -1;
     }
+
+    public static String tableBikeType(String s) throws SQLException {
+        if(s.equals("Xe dap don")){
+            return "singleBike";
+        }else if(s.equals("Xe dap doi")){
+            return "doubleBike";
+        }else if(s.equals("Xe dap dien")){
+            return "electricBike";
+        }else {
+            return "";
+        }
+    }
 }

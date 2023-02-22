@@ -50,6 +50,14 @@ public class Bike {
         return rentCostCalculator.calculateRentCost(startTime, endTime, this);
     }
 
+    public void setDepositStrategy(DepositCostCalculator deposit){
+        this.depositCostCalculator = deposit;
+    }
+
+    public void setRentStrategy(RentCostCalculator rent){
+        this.rentCostCalculator = rent;
+    }
+
     public float getCostScale() {
         return costScale;
     }

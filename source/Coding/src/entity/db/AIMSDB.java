@@ -30,7 +30,7 @@ public class AIMSDB {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/new_ecobike";
-            connect = DriverManager.getConnection(url, "root", "@duongnh!1203");
+            connect = DriverManager.getConnection(url, "root", "");
             LOGGER.info("Connect database successfully");
         } catch (Exception e) {
             LOGGER.info(e.getMessage());

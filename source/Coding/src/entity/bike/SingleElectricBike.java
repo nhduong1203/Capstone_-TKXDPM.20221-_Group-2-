@@ -23,23 +23,24 @@ public class SingleElectricBike extends Bike{
 //        this.numOfPedal = res.getInt("numOfPedal");
     }
 
-    @Override
-    public int calculateDepositCost() {
-        depositCostCalculator = new DepositStrategy();
-        return super.calculateDepositCost();
-    }
-
-    @Override
-    public long calculateRentCost(String startTime, String endTime) {
-        rentCostCalculator = new Strategy1();
-        return super.calculateRentCost(startTime, endTime);
-    }
+//    @Override
+//    public int calculateDepositCost() {
+//        depositCostCalculator = new DepositStrategy();
+//        return super.calculateDepositCost();
+//    }
+//
+//    @Override
+//    public long calculateRentCost(String startTime, String endTime) {
+//        rentCostCalculator = new Strategy1();
+//        return super.calculateRentCost(startTime, endTime);
+//    }
 
     @Override
     public String getInfo() {
         return "Id: " + OutputController.Convert(Integer.toString(getId())) + "\n" +
-                "Num of Seats: " + getNumOfSeat() + "\n" +
                 "Type: " + getType() + "\n" +
+                "Num of Seats: " + getNumOfSeat() + "\n" +
+                "Num of Saddles: " + getNumOfSaddle() + "\n" +
                 "Value: " + getValueOfBike() + "\n" +
                 "Status: " + getBikeStatus() + "\n" +
                 "Motor: " + this.motor + "\n" +
@@ -50,11 +51,12 @@ public class SingleElectricBike extends Bike{
     @Override
     public String getRentInfo() {
         return "Id: " + OutputController.Convert(Integer.toString(getId())) + "\n" +
-                "Num of Seats: " + getNumOfSeat() + "\n" +
                 "Type: " + getType() + "\n" +
+                "Num of Seats: " + getNumOfSeat() + "\n" +
+                "Num of Saddles: " + getNumOfSaddle() + "\n" +
                 "Status: " + getBikeStatus() + "\n" +
                 "Value: " + getValueOfBike() + " VNĐ" + "\n" +
-                "Deposit: " + calculateDepositCost() + " VNĐ" + "\n" +
+                "Deposit: " + Configs.rentTransaction.getDepositeCost() + " VNĐ" + "\n" +
                 "Start time: " + Configs.rentTransaction.getRentTime() +
                 "Motor: " + this.motor + "\n" +
                 "Max Time Run: " + this.maxTime + "\n" +

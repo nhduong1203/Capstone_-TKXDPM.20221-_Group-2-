@@ -1,5 +1,6 @@
 package entity.bike;
 
+import controller.InputController;
 import entity.db.AIMSDB;
 import utils.Utils;
 import views.screen.popup.PopupScreen;
@@ -31,13 +32,14 @@ public class BikeHandler {
             if(!res.next()){
                 return null;
             }
-            String bikeTable = tableBikeType(res.getString("type"));
+            String bikeTable = InputController.tableBikeType(res.getString("type"));
             String mysql = "SELECT * FROM bike INNER JOIN " + bikeTable+ " ON bike.bikeCode = " + bikeTable+ ".bikeCode WHERE bike.bikeCode = "+res.getInt("bikeCode");
             Statement mystm = AIMSDB.getConnection().createStatement();
             ResultSet myres = mystm.executeQuery(mysql);
             while(myres.next()){
                 return handleBikeType(myres);
             }
+
 //            return handleBikeType(res);
         }catch(Exception e) {
             LOGGER.info("Get Bike By ID caused Error");
@@ -46,17 +48,17 @@ public class BikeHandler {
         return null;
     }
 
-    public static String tableBikeType(String s) throws SQLException {
-        if(s.equals("Xe dap don")){
-            return "singleBike";
-        }else if(s.equals("Xe dap doi")){
-            return "doubleBike";
-        }else if(s.equals("Xe dap dien")){
-            return "electricBike";
-        }else {
-            return null;
-        }
-    }
+//    public static String tableBikeType(String s) throws SQLException {
+//        if(s.equals("Xe dap don")){
+//            return "singleBike";
+//        }else if(s.equals("Xe dap doi")){
+//            return "doubleBike";
+//        }else if(s.equals("Xe dap dien")){
+//            return "electricBike";
+//        }else {
+//            return null;
+//        }
+//    }
 
     public static Bike handleBikeType(ResultSet res) throws SQLException {
         String type = res.getString("type");
@@ -82,7 +84,7 @@ public class BikeHandler {
         ResultSet res = stm.executeQuery(sql);
         ArrayList medium = new ArrayList<>();
         while(res.next()){
-            String bikeTable = tableBikeType(res.getString("type"));
+            String bikeTable = InputController.tableBikeType(res.getString("type"));
             String mysql = "SELECT * FROM bike INNER JOIN " + bikeTable+ " ON bike.bikeCode = " + bikeTable+ ".bikeCode WHERE bike.bikeCode = "+res.getInt("bikeCode");
             Statement mystm = AIMSDB.getConnection().createStatement();
             ResultSet myres = mystm.executeQuery(mysql);

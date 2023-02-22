@@ -16,23 +16,25 @@ public class SingleBike extends Bike{
         this.costScale = 1.0F;
     }
 
-    @Override
-    public int calculateDepositCost() {
-        depositCostCalculator = new DepositStrategy();
-        return super.calculateDepositCost();
-    }
-
-    @Override
-    public long calculateRentCost(String startTime, String endTime) {
-        rentCostCalculator = new Strategy1();
-        return super.calculateRentCost(startTime, endTime);
-    }
+//    @Override
+//    public int calculateDepositCost() {
+//        depositCostCalculator = new DepositStrategy();
+//        return super.calculateDepositCost();
+//    }
+//
+//    @Override
+//    public long calculateRentCost(String startTime, String endTime) {
+//        rentCostCalculator = new Strategy1();
+//        return super.calculateRentCost(startTime, endTime);
+//    }
 
     @Override
     public String getInfo() {
         return "Id: " + OutputController.Convert(Integer.toString(getId())) + "\n" +
-                "Num of Seats: " + getNumOfSeat() + "\n" +
                 "Type: " + getType() + "\n" +
+                "Num of Seats: " + getNumOfSeat() + "\n" +
+                "Num of Saddles: " + getNumOfSaddle() + "\n" +
+                "Num of Pedals: " + numOfPedal + "\n" +
                 "Value: " + getValueOfBike() + "\n" +
                 "Status: " + getBikeStatus();
 
@@ -41,11 +43,13 @@ public class SingleBike extends Bike{
     @Override
     public String getRentInfo() {
         return "Id: " + OutputController.Convert(Integer.toString(getId())) + "\n" +
-                "Num of Seats: " + getNumOfSeat() + "\n" +
                 "Type: " + getType() + "\n" +
+                "Num of Seats: " + getNumOfSeat() + "\n" +
+                "Num of Saddles: " + getNumOfSaddle() + "\n" +
+                "Num of Pedals: " + numOfPedal + "\n" +
                 "Status: " + getBikeStatus() + "\n" +
                 "Value: " + getValueOfBike() + " VNĐ" + "\n" +
-                "Deposit: " + calculateDepositCost() + " VNĐ" + "\n" +
+                "Deposit: " + Configs.rentTransaction.getDepositeCost() + " VNĐ" + "\n" +
                 "Start time: " + Configs.rentTransaction.getRentTime();
     }
 }
