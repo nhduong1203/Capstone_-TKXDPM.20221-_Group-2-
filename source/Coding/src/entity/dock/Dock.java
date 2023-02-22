@@ -62,6 +62,7 @@ public class Dock {
      * @throws SQLException
      */
     public static List getAllDock() throws SQLException {
+        //get Dock -> OK
         Statement stm = AIMSDB.getConnection().createStatement();
         ResultSet res = stm.executeQuery("select * from dock");
         ArrayList medium = new ArrayList<>();

@@ -20,11 +20,12 @@ public class InputController {
             if(Character.isDigit(message.charAt(i))){
                 tag = message.substring(0, i);
                 id = message.substring(i, length);
+                break;
             }
+
         }
         if(tag.equals("ECO")){
             try {
-//                int idConvert = Integer.parseInt(id);
                 return Integer.parseInt(id);
             }catch (Exception ex){
                 ex.printStackTrace();

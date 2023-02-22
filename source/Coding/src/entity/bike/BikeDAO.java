@@ -16,17 +16,20 @@ import java.util.ArrayList;
  */
 public class BikeDAO {
     public static int getBikeStatusByID(int bikeID) throws SQLException {
+        // OK getBikeStatusByID -> dont need to query 2 times
         String sql = "SELECT * FROM bike WHERE bikeCode = "+bikeID;
         ResultSet res = AIMSDB.query(sql);
         res.next();
         return res.getInt("status");
     }
     public static void updateBIkeStatus(int bikeID, int status){
+        //updateBIkeStatus -> dont need to query 2 times
         String sql = "UPDATE bike SET status = "+status+" WHERE bikeCode = "+bikeID;
         AIMSDB.execute(sql);
     }
 
     public static void updateBikeInDock(int bikeID, int dockID){
+        //updateBikeInDock -> dont need to query 2 times
         String sql = "UPDATE bike SET dockID = "+dockID+" WHERE bikeCode = "+bikeID;
         AIMSDB.execute(sql);
     }

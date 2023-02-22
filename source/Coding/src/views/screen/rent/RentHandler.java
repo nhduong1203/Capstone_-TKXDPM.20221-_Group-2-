@@ -51,7 +51,6 @@ public class RentHandler extends BaseScreenHandler{
 
     private void setBarCode() {
 
-//        barCode.setText(Utils.md5(Integer.toString(bike.getId())));
         barCode.setEditable(true);
 
         btnRent.setOnMouseClicked(e -> {
@@ -60,7 +59,6 @@ public class RentHandler extends BaseScreenHandler{
                 if(Configs.rentTransaction!=null){
                     PopupScreen.error("You already rent a bike! \n Please return bike first!");
                 }else {
-//                    Bike _bike = BikeHandler.getBikeById(Integer.parseInt(barCode.getText()));
                     Bike _bike = BikeHandler.getBikeById(InputController.Convert(barCode.getText()));
                     if(_bike == null){
                         PopupScreen.error("Bike not exist!");
@@ -69,12 +67,6 @@ public class RentHandler extends BaseScreenHandler{
                     this.bike = _bike;
                     _bike.updateStatus();
 
-//                    RentInfoHandler invoice = new RentInfoHandler(this.stage, Configs.INVOICE_PATH, bike);
-//                    invoice.setBController(new ViewBikeController());
-//                    invoice.setScreenTitle("Invoice");
-//                    invoice.setPreviousScreen(this);
-//                    invoice.setHomeScreenHandler(this.homeScreenHandler);
-//                    invoice.show();
 
                     try {
                         BikeScreenHandler b1 = new BikeScreenHandler(this.stage, Configs.BIKE_SCREEN_PATH, bike);
