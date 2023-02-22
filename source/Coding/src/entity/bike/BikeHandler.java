@@ -31,7 +31,14 @@ public class BikeHandler {
             if(!res.next()){
                 return null;
             }
-            return handleBikeType(res);
+            String bikeTable = tableBikeType(res.getString("type"));
+            String mysql = "SELECT * FROM bike INNER JOIN " + bikeTable+ " ON bike.bikeCode = " + bikeTable+ ".bikeCode WHERE bike.bikeCode = "+res.getInt("bikeCode");
+            Statement mystm = AIMSDB.getConnection().createStatement();
+            ResultSet myres = mystm.executeQuery(mysql);
+            while(myres.next()){
+                return handleBikeType(myres);
+            }
+//            return handleBikeType(res);
         }catch(Exception e) {
             LOGGER.info("Get Bike By ID caused Error");
             e.printStackTrace();
