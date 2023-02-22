@@ -3,6 +3,7 @@ package views.screen.rent;
 import controller.*;
 import entity.bike.Bike;
 import entity.bike.BikeHandler;
+import entity.costcalculator.Strategy1;
 import entity.payment.RentTransaction;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -63,6 +64,7 @@ public class ReturnBikeHandler extends BaseScreenHandler {
         LOGGER.info(rentTransaction.getRentTime());
         LOGGER.info(rentTransaction.getReturnTime());
 
+        Configs.bike.SetRentStrategy(new Strategy1());
         rentTransaction.setRentCost((int) Configs.bike.calculateRentCost(rentTransaction.getRentTime(), rentTransaction.getReturnTime()));
 
         rentBikeID.setText(OutputController.Convert(Integer.toString(rentTransaction.getBikeCode())));

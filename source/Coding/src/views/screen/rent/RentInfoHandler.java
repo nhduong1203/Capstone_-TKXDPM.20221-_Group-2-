@@ -37,8 +37,8 @@ public class RentInfoHandler extends BaseScreenHandler {
     @FXML
     private Label saddle;
 
-    @FXML
-    private  Label pedal;
+//    @FXML
+//    private  Label pedal;
 
     @FXML
     private Label dock;
@@ -82,7 +82,7 @@ public class RentInfoHandler extends BaseScreenHandler {
 
         dock.setText(Integer.toString(bike.getDockID()));
 
-        pedal.setText(Integer.toString(bike.getNumOfPedal()));
+//        pedal.setText(Integer.toString(bike.getNumOfPedal()));
 
         licensePlates.setText(bike.getLicensePlate());
 
@@ -90,6 +90,7 @@ public class RentInfoHandler extends BaseScreenHandler {
 
         value.setText(bike.getValueOfBike()+" VND");
 
+        bike.SetDepositStrategy(new DepositStrategy());
         deposit.setText(bike.calculateDepositCost() +" VND");
 
         btnPayment.setOnMouseClicked(e -> {
@@ -97,6 +98,8 @@ public class RentInfoHandler extends BaseScreenHandler {
                 // Thanh toán
                 RentTransaction rentTransaction = new RentTransaction();
                 rentTransaction.setBikeCode(bike.getId());
+
+                bike.SetDepositStrategy(new DepositStrategy());
                 rentTransaction.setDepositeCost(bike);
 
                 PaymentScreenHandler paymentScreen = new PaymentScreenHandler(this.stage, Configs.PAYMENT_SCREEN, rentTransaction);

@@ -15,18 +15,17 @@ public class DoubleBike extends Bike{
         this.costScale = 1.5F;
     }
 
-
-    @Override
-    public int calculateDepositCost() {
-        depositCostCalculator = new DepositStrategy();
-        return super.calculateDepositCost();
-    }
-
-    @Override
-    public long calculateRentCost(String startTime, String endTime) {
-        rentCostCalculator = new Strategy1();
-        return super.calculateRentCost(startTime, endTime);
-    }
+//    @Override
+//    public int calculateDepositCost() {
+//        depositCostCalculator = new DepositStrategy();
+//        return super.calculateDepositCost();
+//    }
+//
+//    @Override
+//    public long calculateRentCost(String startTime, String endTime) {
+//        rentCostCalculator = new Strategy1();
+//        return super.calculateRentCost(startTime, endTime);
+//    }
 
     @Override
     public String getInfo() {
@@ -44,7 +43,7 @@ public class DoubleBike extends Bike{
                 "Type: " + getType() + "\n" +
                 "Status: " + getBikeStatus() + "\n" +
                 "Value: " + getValueOfBike() + " VNĐ" + "\n" +
-                "Deposit: " + calculateDepositCost() + " VNĐ" + "\n" +
+                "Deposit: " + Configs.rentTransaction.getDepositeCost() + " VNĐ" + "\n" +
                 "Start time: " + Configs.rentTransaction.getRentTime();
     }
 }
